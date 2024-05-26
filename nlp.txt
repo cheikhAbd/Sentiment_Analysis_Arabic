@@ -1,0 +1,13 @@
+Pre-processing Data (NLTK Text Data Cleaning ) 
+NLTK : Le Natural Language Toolkit, ou plus communément NLTK, est une suite de bibliothèques et de programmes de traitement symbolique et statistique du langage naturel pour l'anglais écrit dans le langage de programmation Python. Il prend en charge les fonctionnalités de classification, de tokenisation, de stemming, de marquage, d'analyse et de raisonnement sémantique.
+
+
+ ******* on importe stopwords depuis ( stopwords in nltk.corpus ) apres tu doit telecharger toute le mot qui sont dans stopwords (nltk.download('stopwords') ) apres dans le methode ( stopwords.words(lang) ) tu specefie la langage que tu voulais ******** 
+
+1- supprimer la ponctuation  --> re.sub('[^a-zA-Z]',"",data['col'][i])
+2- transfer les mots du phrase un minuscle ---> s.lower()
+4- je doit transformer les mots du phrases sous forme du liste ---> s.split()	
+5- Apres je veux regarder si le mots du phrase sont dans (stopwords.words(lang) ) et je doit enlever --> [w for w in s if s not in stopwords.words(lang) ]
+6-  Apres je retourner le list sous forme du phrase ---> ' '.join(s)
+7- (Stemming) On doit esseyer de retourner le phrase a son original dans la langue en utilisant le librairie ( from nltk.stem import PorterStemmer ) ---> s= porterStemmer().stem(s) 
+8- Maintenant on transfer notre phrase vers des donnees numeric pour l'ordinateur il comprend ces mots en utilisant ---> CountVectorizer().fit_transforme(s.split()).toarray()

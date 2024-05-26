@@ -1,0 +1,18 @@
+[
+    {
+        "Text": "انها لا تمطر",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "لا يمكننا الانتظار بالنسبة لك.",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "لا أستطيع أن أذهب اليوم",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "والدي ليس سعيدا",
+        "Sentiment": "Negative sentiment"
+    }
+]
