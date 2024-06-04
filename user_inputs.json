@@ -14,5 +14,217 @@
     {
         "Text": "والدي ليس سعيدا",
         "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "وقالت انها لا تقرأ هذا الكتاب",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "السلام عليكم كيف حال هذا الحساب ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "صباح",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "الحمد لله",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "انا فتاة موريتانية",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "Helllo",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "ما هذا يا ناس",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": " ما هذا يا ناس ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "غزة تحت القصف ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "oui",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": " أنا جميلة ",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "ما أسمعتك",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "هههههه",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "جامعة الخلوات",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "شحال المروح",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "جميل",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "منة\n",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "سيدي الشيخ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "الشيخ لاتدحسناااا",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": " جيد جدا ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "والفهم",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "انا",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "مما فاطمة",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "الرفعة",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": " فلسطين حرة ",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "اشطاري",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "سلام",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "مرحبا",
+        "Sentiment": "Positive sentiment"
+    },
+    {
+        "Text": "جامعة",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "نطح الولد الفصل",
+        "Sentiment": "Negative sentiment"
+    },
+    {
+        "Text": "جامعة",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "جامعة الخلوات",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "الخيل ولليل والبيداء تعرفني أنا أريد أتزوج أريد فتاتا جميلة ",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "آن فترانة",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "آن فترانة",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": " آنا أريد أن انتحر ",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "أنا أملك سيارة أحلامي \n",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": " انا سعيد ",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "انا مستاء",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "أنا سعيد\n",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "أنا حشمان\n",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": " أنا أملك كل ماأريد ",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "اشعر بشيء لا أعرف إن كان توترا ام فرح",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "اشعر بشيء لا أعرف إن كان فرحا ام توتر",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "آن مخطوبة",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "لمذا",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "قشعريرة",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "حب",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": "زواج",
+        "Sentiment": "مشاعر رائعه 😊"
+    },
+    {
+        "Text": " زوجة صالحة ",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": " زوجة تصلي ",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
+    },
+    {
+        "Text": "زوجة لا تصلي",
+        "Sentiment": "مشاعر سيئة للأسف 😢"
     }
 ]

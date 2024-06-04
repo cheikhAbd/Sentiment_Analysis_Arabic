@@ -2,23 +2,51 @@ import gradio as gr
 import pickle
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-import json
-import os
+import mysql
+from mysql.connector import Error
 
 # Charger le modèle et le vectoriseur
-model = pickle.load(open('Dataset/trained_model.sav', 'rb'))
+model = pickle.load(open('Model/trained_model.sav', 'rb'))
+vectorizer = pickle.load(open('Model/vectorizer.sav', 'rb'))
 
-# Vous devez sauvegarder et charger le vectoriseur aussi, car il doit transformer le texte de la même manière qu'il l'a fait lors de l'entraînement du modèle
-vectorizer = pickle.load(open('Dataset/vectorizer.sav', 'rb'))
+# Configurer la connexion à la base de données MySQL
+def create_connection():
+    connection = None
+    try:
+        connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="sentimentAnalytic"
+        )
+        if connection.is_connected():
+            print("Connexion réussie à la base de données MySQL")
+    except Error as e:
+        print(f"Erreur de connexion à la base de données MySQL : {e}")
+    return connection
 
-# Chemin du fichier JSON
-json_file_path = 'user_inputs.json'
+# Créer la table si elle n'existe pas déjà
+def create_table(connection):
+    create_table_query = """
+    CREATE TABLE IF NOT EXISTS dataset_arabic (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        text VARCHAR(255) NOT NULL,
+        sentiment VARCHAR(255) NOT NULL
+    )
+    """
+    cursor = connection.cursor()
+    cursor.execute(create_table_query)
+    connection.commit()
 
-# Initialiser le fichier JSON s'il n'existe pas
-if not os.path.exists(json_file_path):
-    with open(json_file_path, 'w') as f:
-        json.dump([], f)
-
+# Insérer les données dans la table
+def insert_input(connection, text, sentiment):
+    insert_query = """
+    INSERT INTO dataset_arabic (text, sentiment)
+    VALUES (%s, %s)
+    """
+    cursor = connection.cursor()
+    cursor.execute(insert_query, (text, sentiment))
+    connection.commit()
 
 def predict_sentiment(text):
     # Transformer le texte avec le vectoriseur
@@ -28,30 +56,30 @@ def predict_sentiment(text):
     prediction = model.predict(text_vectorized)
     
     # Déterminer le sentiment
-    sentiment = "Negative sentiment" if prediction[0] == 0 else "Positive sentiment"
+    sentiment = "مشاعر سيئة للأسف 😢" if prediction[0] == 0 else "مشاعر رائعه 😊"
     
-    # Charger les entrées existantes
-    with open(json_file_path, 'r') as f:
-        data = json.load(f)
-    
-    # Ajouter la nouvelle entrée
-    data.append({"Text": text, "Sentiment": sentiment})
-    
-    # Sauvegarder les données mises à jour dans le fichier JSON
-    with open(json_file_path, 'w') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+    # Connexion à la base de données
+    connection = create_connection()
+    if connection.is_connected():
+        insert_input(connection, text, "neg" if sentiment == "مشاعر سيئة للأسف 😢" else "pos" )
+        connection.close()
     
     return sentiment
-
 
 # Créer l'interface Gradio
 iface = gr.Interface(
     fn=predict_sentiment,
-    inputs=gr.Textbox(lines=2, placeholder="Enter a tweet here..."),
+    inputs=gr.Textbox(lines=2, placeholder="أدخل التغريدة هنا...."),
     outputs=gr.Textbox(),
-    title="Arabic Sentiment Analysis",
-    description="Enter an Arabic tweet to get the sentiment prediction."
+    title="تحليل المشاعر العربية",
+    description="أدخل تغريدة باللغة العربية للحصول على توقعات المشاعر"
 )
 
 # Lancer l'interface
-iface.launch()
+iface.launch(share=True)
+
+# Initialiser la connexion et créer la table lors du démarrage du script
+connection = create_connection()
+if connection.is_connected():
+    create_table(connection)
+    connection.close()
